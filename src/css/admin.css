@@ -1,0 +1,200 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul,ol{list-style: none;}
+body{background: #FAFAFA;font: 14px/1.2 Arial, Helvetica, sans-serif;}
+.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; } 
+
+/* layout */
+.wrapper{ display: flex; flex-direction: column; height: 100vh; }
+.wrapper header{ height: 50px; }
+.wrapper main{ flex-grow: 1; }
+.wrapper footer{ height: 145px; }
+
+/* header */
+header{
+    background: #C62F2F;
+}
+header .logo{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 15px;
+}
+header .logo .icon{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 5px;
+}
+/* main */
+main{
+    display: flex;
+}
+main .songArea{
+    width: 200px;
+    background: #F5F5F7;
+    border-right: 1px solid #E1E1E2;
+    display: flex;
+    flex-direction: column;
+}
+main .songForm{
+    flex-grow: 1;
+}
+.songArea p{
+    color: #7D7D7D;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.songList{
+    flex-grow: 1;
+}
+.songList ul{
+    margin-top: 8px;
+}
+.songList ul li{
+    color: rgb(92, 92, 92);
+    padding: 8px 20px;
+    border-left: 2px solid transparent;
+}
+.songList ul li .icon{
+    margin-right: 5px;
+    font-size: 18px;
+}
+.songList ul li:hover{
+    color: #000;
+}
+.songList ul li.active{
+    background: #E6E7EA;
+    color: #000;
+    border-left: 3px solid #C62F2F;
+}
+.newSong{
+    
+}
+
+/* footer */
+footer{
+    border-top: 1px solid#D3D3D3;
+    display: flex;
+    justify-content: center;
+}
+.footerArea ul {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+.footerArea ul li{
+    color: #999999;
+}
+.footerArea ul li{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #D0D0D0;
+}
+.footerArea ul li:first-child{
+    padding-left: 0;
+}
+.footerArea ul li:last-child{
+    border-right: none;
+}
+.footerArea p{
+    color: #666666;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.newSong{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(198, 47, 47);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 8px;
+}
+.newSong svg{
+    font-size: 18px;
+    margin-right: 5px;
+}
+.newSong:hover{
+    background: rgb(228, 106, 140);
+}
+/* songForm */
+.songForm main{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.songForm main h3{
+    font-weight: normal;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(225, 225, 226);
+    color: rgb(51, 51, 51);
+}
+
+.songForm main h3 span{
+    font-size: 12px;
+    margin-left: 10px;
+    color: rgb(102, 102, 102);
+}
+.songForm main h3 span a{
+    color: rgb(12, 115, 194);
+}
+
+.songForm main .play{
+    width: 120px;
+    color: #fff;
+    background: rgb(198, 47, 47);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 15px 30px;
+}
+
+.songForm main form{
+    margin-top: 15px;
+    border-top: 1px solid rgb(225, 225, 226);
+}
+.songForm main form table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.songForm main form table td{
+    border: 1px solid rgb(225, 225, 226);
+    border-left: none;
+    border-top: none;
+    padding: 5px 3px;
+    color: rgb(102, 102, 102);
+}
+table tr.edit td{
+    height: 30px;
+    border: none;
+    background: rgb(228, 228, 230);
+}
+table tr.edit input[type=text]{
+    border: none;
+    height: 100%;
+    padding: 5px;
+    width: 65%;
+    border-radius: 4px;
+}
+table tr.edit input[type=text]:focus{
+    outline: none;
+}
+table tr.edit td button{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 3px 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
